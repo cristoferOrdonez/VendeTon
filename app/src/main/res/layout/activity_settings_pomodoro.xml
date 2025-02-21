@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".SettingsPomodoro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonBackSettingsPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrow_back_left_button" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSaveSettingsPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/button_save" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_divider_list" />
+
+    <LinearLayout
+        android:id="@+id/timePomodoroButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewPomodoroName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="0.1sp"
+            android:text="Pomodoro time"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textViewPomodoroTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeMinTextSize="0.1sp"
+            android:autoSizeTextType="uniform"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@color/gray_second_text"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_divider_list" />
+
+    <LinearLayout
+        android:id="@+id/timeBreakPomodoroButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewPomodoroBreakName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMinTextSize="0.1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Break time"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textViewPomodoroBreakTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autoSizeMinTextSize="0.1sp"
+            android:autoSizeTextType="uniform"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@color/gray_second_text"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_divider_list" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMinTextSize="0.1sp"
+            android:autoSizeTextType="uniform"
+            android:text="Volume"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/seekBarVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:progress="30"
+            android:progressBackgroundTint="@color/white"
+            android:progressTint="@color/white"
+            android:thumbTint="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonRestoreSettings"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:autoSizeMinTextSize="0.1sp"
+        android:background="@drawable/button_restore_settings_unite"
+        android:text="Restore settings"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

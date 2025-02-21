@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Estado cuando el botón está presionado -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/play_timer_button_pressed" />
+
+    <!-- Estado por defecto -->
+    <item android:drawable="@drawable/play_timer_button" />
+
+</selector>

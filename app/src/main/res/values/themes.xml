@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EstAut" parent="Theme.Design.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:background"/>
+
+    </style>
+
+    <style name="Theme.EstAut" parent="Base.Theme.EstAut" />
+
+</resources>

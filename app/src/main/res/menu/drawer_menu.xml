@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Tecnicas">
+
+        <menu>
+
+            <item android:id="@+id/Pomodoro"
+                android:title="Pomodoro">
+            </item>
+            <item android:id="@+id/FlashCards"
+                android:title="Flash Cards">
+            </item>
+            <item android:id="@+id/Cornell"
+                android:title="Cornell">
+            </item>
+            <item android:id="@+id/Quices"
+                android:title="Quices">
+            </item>
+
+        </menu>
+
+    </item>
+
+</menu>

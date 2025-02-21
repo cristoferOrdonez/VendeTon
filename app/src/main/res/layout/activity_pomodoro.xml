@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Pomodoro">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imageButtonReplayTimer"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/replay_timer_button_enabled"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButtonPlayPauseTimer"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButtonPlayPauseTimer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButtonPlayPauseTimer" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonRestorePomodoros"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/restore_button_enabled"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewPomodoros"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPomodoros"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPomodoros" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonPlayPauseTimer"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/button_play_timer_unite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewPomodoros" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonBackPomodoro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/arrow_back_left_button" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonSettingsPomodoro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/settings_button" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMoreTime"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageButtonPlayPauseTimer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageButtonPlayPauseTimer"
+                    app:layout_constraintTop_toTopOf="@+id/imageButtonPlayPauseTimer"
+                    app:srcCompat="@drawable/more_time_button_enabled" />
+
+                <TextView
+                    android:id="@+id/textViewTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMinTextSize="0.1sp"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/progressBarTimer"
+                    app:layout_constraintEnd_toEndOf="@+id/progressBarTimer"
+                    app:layout_constraintStart_toStartOf="@+id/progressBarTimer"
+                    app:layout_constraintTop_toTopOf="@+id/progressBarTimer" />
+
+                <TextView
+                    android:id="@+id/textViewPlus1min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="20dp"
+                    android:autoSizeMinTextSize="0.1sp"
+                    android:gravity="center"
+                    android:text="+ 1min"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toTopOf="@+id/imageButtonMoreTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageButtonPlayPauseTimer" />
+
+                <TextView
+                    android:id="@+id/textViewPomodoros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMinTextSize="0.1sp"
+                    android:gravity="center"
+                    android:text="Pomodoros: 0"
+                    android:textColor="@color/white"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewCircleTimer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBarTimer" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarTimer"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle_progress_bar_timer"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewCircleTimer"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewCircleTimer"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewCircleTimer"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewCircleTimer"
+                    tools:progress="60" />
+
+                <ImageView
+                    android:id="@+id/imageViewCircleTimer"
+                    android:layout_width="400dp"
+                    android:layout_height="400dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.454"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/circle_timer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_gray_layout_tasks_pomodoro"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewTasksIndication"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:autoSizeMinTextSize="0.1sp"
+                    android:text="Tasks"
+                    android:textColor="@color/white"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMoreOptionsTasks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/button_more_options_horizontal" />
+
+
+                <ImageButton
+                    android:id="@+id/imageButtonBackTasks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow_circle_back_right_button" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listViewTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"/>
+
+            <Button
+                android:id="@+id/buttonAddTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoSizeMinTextSize="0.1sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/button_restore_settings_unite"
+                android:clickable="true"
+                android:text="Add task"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewNewTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_task_card"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextNewTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoSizeMinTextSize="0.1sp"
+                        android:autoSizeTextType="uniform"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButtonAcceptNewTask"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/check_button" />
+
+                        <ImageButton
+                            android:id="@+id/imageButtonCancelNewTask"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/close_x_button" />
+
+                        <TextView
+                            android:id="@+id/textViewWordCounterCardNewTask"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:autoSizeMinTextSize="0.1sp"
+                            android:gravity="right"
+                            android:text="words/max"
+                            android:textColor="@color/white"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonTasks"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitXY"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/button_tasks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

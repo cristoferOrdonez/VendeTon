@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_disabled">#363636</color>
+    <color name="gray_pressed">#838383</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_divider_list">#575757</color>
+    <color name="gray_second_text">#878787</color>
+    <color name="gray_button">#272727</color>
+    <color name="gray_button_pressed">#373737</color>
+    <color name="dark_gray_alert_dialog">#2B2B2B</color>
+    <color name="dark_gray_layout_tasks_pomodoro">#151515</color>
+    <color name="green_check_button">#22DD2E</color>
+    <color name="red_close_x_button">#EA0404</color>
+    <color name="red_max_words_task_card">#EA0404</color>
+    <color name="gray_text_checked_pomodoro_taks">#717171</color>
+    <color name="gray_task_card">#424242</color>
+    <color name="gray_task_card_being_edited">#393939</color>
+</resources>

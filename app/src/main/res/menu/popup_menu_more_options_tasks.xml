@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/buttonHideIncompleteTasks"
+        android:title="hide incomplete tasks"/>
+
+    <item android:id="@+id/buttonDeleteIncompleteTasks"
+        android:title="delete incomplete tasks"/>
+
+    <item android:id="@+id/buttonDeleteCompleteTasks"
+        android:title="delete complete tasks"/>
+
+    <item android:id="@+id/buttonDeleteAllTask"
+        android:title="delete all tasks"/>
+
+</menu>
